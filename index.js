@@ -23,10 +23,6 @@ app.post('/otp', async  (req,res)=>{
 
 app.post('/login', async (req,res)=>{
     const {mobile,otp}=req.body
-
-
-    console.log(datas);
-    console.log(mobile);
     if(datas[mobile]==otp){
         console.log(datas);
         await User.create({mobile:mobile})
